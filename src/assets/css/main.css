@@ -17587,7 +17587,8 @@ a.btn-icon-only
     }
 }
 
-.navbar-vertical.navbar-expand-xs.fixed-left + .main-content
+.navbar-vertical.navbar-expand-xs.fixed-left + .main-content,
+.main-content
 {
     margin-left: 120px;
 }
@@ -17599,7 +17600,8 @@ a.btn-icon-only
 
 @media (min-width: 576px)
 {
-    .navbar-vertical.navbar-expand-sm.fixed-left + .main-content
+    .navbar-vertical.navbar-expand-sm.fixed-left + .main-content,
+    .main-content
     {
         margin-left: 120px;
     }
