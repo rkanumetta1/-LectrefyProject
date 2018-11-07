@@ -20874,13 +20874,15 @@ header
     vertical-align: middle;
 }
 
-.table .thead-dark th
+.table .thead-dark th,
+.table th
 {
     color: #4d7bca; 
     background-color: #1c345d;
 }
 
-.table .thead-light th
+.table .thead-light th,
+.table th
 {
     background-color: #f6f9fc;
 }
@@ -20927,6 +20929,7 @@ header
 {
     padding-right: 1.5rem; 
     padding-left: 1.5rem;
+    border-bottom-style: none;
 }
 
 p
