@@ -8,6 +8,7 @@ import { InventorymanageComponent } from '../components/inventortyManagement/inv
 import { ContentlibhomeComponent } from '../components/ContentLibrary/contentlibhome/contentlibhome.component';
 import { CreatecontentComponent } from '../components/ContentLibrary/createcontent/createcontent.component';
 import { EditcampaignComponent } from '../components/editcampaign/editcampaign.component';
+import { LibhomeComponent } from '../components/ContentLibrary/libhome/libhome.component';
 
 
 const routes: Routes = [
@@ -48,7 +49,7 @@ const routes: Routes = [
     },
     {
         path:'contlib',
-        component:ContentlibhomeComponent,
+        component:LibhomeComponent,
         children:[{
            path:'',
            redirectTo:'contentlibhome',

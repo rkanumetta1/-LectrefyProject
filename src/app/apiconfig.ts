@@ -15,3 +15,8 @@ export const contentApis={
         filter:restApi+'contents/filter?description=',
         update:restApi+'api/v1.0/contents/'
 }
+
+
+export const libApis={
+         
+}

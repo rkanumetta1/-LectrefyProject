@@ -18,6 +18,7 @@ import { ContentlibhomeComponent } from './components/ContentLibrary/contentlibh
 import { CreatecontentComponent } from './components/ContentLibrary/createcontent/createcontent.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EditcampaignComponent } from './components/editcampaign/editcampaign.component';
+import { LibhomeComponent } from './components/ContentLibrary/libhome/libhome.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { EditcampaignComponent } from './components/editcampaign/editcampaign.co
     InventorymanageComponent,
     ContentlibhomeComponent,
     CreatecontentComponent,
-    EditcampaignComponent
+    EditcampaignComponent,
+    LibhomeComponent
   ],
   imports: [
     BrowserModule,   

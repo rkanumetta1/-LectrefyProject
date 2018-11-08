@@ -35,11 +35,8 @@ export class CampaignmanagementComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
   constructor(public router:Router, private  campaignService:  CampaignmangmntService) { 
   
-    const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
-
-    // Assign the data to the data source for the table to render
-    this.dataSource = new MatTableDataSource(users);
- 
+  
+    this.getCampaigns()
   }
 
   applyFilter(filterValue: string) {
@@ -53,8 +50,8 @@ export class CampaignmanagementComponent implements OnInit {
 
 
   ngOnInit() {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
+  
+   
   } 
   
   navigatepage(){
@@ -65,9 +62,21 @@ export class CampaignmanagementComponent implements OnInit {
 
 //api calling for retriving campaigns
 getCampaigns(){
-  this.campaignService.getAllCampaigns().subscribe((data) => {
+  this.campaignService.getAllCampaigns().subscribe((data:any) => {
      // this.contacts  =  data;
-      console.log(data);
+      console.log(data);          
+      if(data){
+        console.log("in data")
+        const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
+        // Assign the data to the data source for the table to render
+        this.dataSource = new MatTableDataSource(users);
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;  
+      }   
+      else{
+        alert("something went wrong")
+      }
+    
   });
 
 }
